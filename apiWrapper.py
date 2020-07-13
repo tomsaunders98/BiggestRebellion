@@ -191,6 +191,6 @@ def main():
         for uin in uins:
             print(f"Proccsing Division {uin}:")
             ProcessVotes(uin)
-    gentables()
+        gentables()
 if __name__ == "__main__":
     main()
