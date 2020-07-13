@@ -2,6 +2,15 @@ import requests, pandas as pd
 from datetime import date
 from git import Repo
 
+def upload(filelist):
+    repo = Repo()
+    today = date.today()
+    commit_message = f'Tables for {today}'
+    repo.index.add(filelist)
+    repo.index.commit(commit_message)
+    origin = repo.remote('origin')
+    origin.push()
+
 def getDivisioins(date):
     url = f"http://lda.data.parliament.uk/commonsdivisions/date/{date}.json"
     res = requests.get(url)
@@ -154,8 +163,11 @@ def gentables():
     ## SNP Rebels
     SNP = MPS[MPS["Party"] == "Scottish National Party"]
     CreateFile('SNPRebel.html', SNP)
+    filelist = ['allRebel.html', 'ConsRebel.html','LabRebel.html', 'SNPRebel.html' ]
+    upload(filelist)
 
-def upload(fielist):
+
+
     
 
 
