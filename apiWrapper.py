@@ -1,5 +1,5 @@
 import requests, pandas as pd
-from datetime import date
+from datetime import date, timedelta
 from git import Repo
 
 def upload(filelist):
@@ -10,6 +10,12 @@ def upload(filelist):
     repo.index.commit(commit_message)
     origin = repo.remote('origin')
     origin.push()
+
+
+def daterange(start_date, end_date):
+    for n in range(int((end_date - start_date).days)):
+        yield start_date + timedelta(n)
+
 
 def getDivisioins(date):
     url = f"http://lda.data.parliament.uk/commonsdivisions/date/{date}.json"
@@ -178,13 +184,13 @@ def gentables():
 
 def main():
     today = date.today()
+    uins = getDivisioins(today)
+    if len(uins) == 0:
+        print("No Divisions today")
+    else:
+        for uin in uins:
+            print(f"Proccsing Division {uin}:")
+            ProcessVotes(uin)
     gentables()
-    # uins = getDivisioins(today)
-    # if len(uins) == 0:
-    #     print("No Divisions today")
-    # else:
-    #     for uin in uins:
-    #         print(f"Proccsing Division {uin}:")
-    #         ProcessVotes(uin)
 if __name__ == "__main__":
     main()
