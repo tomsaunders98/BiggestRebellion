@@ -6,8 +6,8 @@ This uses [Parliament's API](http://www.data.parliament.uk/) to work out which M
 
 
 ### Links
-* [The most rebellious Conservative MPs.](https://htmlpreview.github.io/?https://github.com/tomsaunders98/BiggestRebellion/blob/master/CONRebel.html)
-* [The most rebellious Labour MPs.](https://htmlpreview.github.io/?https://github.com/tomsaunders98/BiggestRebellion/blob/master/LABRebel.html)
+* [The most rebellious Conservative MPs.](https://htmlpreview.github.io/?https://github.com/tomsaunders98/BiggestRebellion/blob/master/ConsRebel.html)
+* [The most rebellious Labour MPs.](https://htmlpreview.github.io/?https://github.com/tomsaunders98/BiggestRebellion/blob/master/LabRebel.html)
 * [The most rebellious SNP MPs.](https://htmlpreview.github.io/?https://github.com/tomsaunders98/BiggestRebellion/blob/master/SNPRebel.html)
 * [The most rebellious MPs overall.](https://htmlpreview.github.io/?https://github.com/tomsaunders98/BiggestRebellion/blob/master/AllRebel.html)
 

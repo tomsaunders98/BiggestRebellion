@@ -159,7 +159,7 @@ def gentables():
         LeaderParty = leaders.loc[i, "Party"]
         MPS["Rebel"] = MPS["Rebel"].apply(lambda x: (x / LeaderValue) * 100 if MPS["Party"].values[0] == LeaderParty else x)
     MPS = MPS.sort_values(by=['Rebel'], ascending=False)
-    CreateFile('allRebel.html', MPS, styles=True)
+    CreateFile('AllRebel.html', MPS, styles=True)
     ## Conservative Rebels
     CONS = MPS[MPS["Party"] == "Conservative"]
     CreateFile('ConsRebel.html', CONS)
@@ -169,7 +169,7 @@ def gentables():
     ## SNP Rebels
     SNP = MPS[MPS["Party"] == "Scottish National Party"]
     CreateFile('SNPRebel.html', SNP)
-    filelist = ['allRebel.html', 'ConsRebel.html','LabRebel.html', 'SNPRebel.html' ]
+    filelist = ['AllRebel.html', 'ConsRebel.html','LabRebel.html', 'SNPRebel.html' ]
     upload(filelist)
 
 
