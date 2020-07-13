@@ -12,7 +12,7 @@ This uses [Parliament's API](http://www.data.parliament.uk/) to work out which M
 * [The most rebellious MPs overall.](https://htmlpreview.github.io/?https://github.com/tomsaunders98/BiggestRebellion/blob/master/AllRebel.html)
 
 ### Requirements
-* PyGithub (for automatically pushing updated tables to the Repo)
+* GitPython (for automatically pushing updated tables to the Repo)
 * Pandas
 
 ## Share Your Thoughts
